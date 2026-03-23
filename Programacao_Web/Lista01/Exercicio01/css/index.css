@@ -1,0 +1,45 @@
+:root {
+  --header: rgb(109, 164, 242);
+  --txt-h1: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#top {
+  background-color: var(--header);
+  padding: 20px;
+  width: 25pc;
+  height: 6pc;
+  border-radius: 0px 0px 20px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title-principal {
+  font-size: 42px;
+  color: var(--txt-h1);
+  text-shadow: 4px 3px 7px #151515a6;
+}
+
+.input-number {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+form {
+  margin: 15px 0;
+}

@@ -1,0 +1,15 @@
+:root {
+  --fundo: #cecece;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: var(--fundo);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
