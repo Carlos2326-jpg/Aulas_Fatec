@@ -12,7 +12,7 @@ class Produto
   public function all()
   {
     // retornar todos os produtos
-  }
+  } 
 
   public function find($id)
   {
