@@ -4,68 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Lista de Produtos</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    th,
-    td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    tr:hover {
-      background-color: #f5f5f5;
-    }
-
-    .success {
-      background-color: #d4edda;
-      color: #155724;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 4px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 5px 10px;
-      margin: 2px;
-      text-decoration: none;
-      border-radius: 3px;
-    }
-
-    .btn-add {
-      background-color: #4CAF50;
-      color: white;
-    }
-
-    .btn-edit {
-      background-color: #2196F3;
-      color: white;
-    }
-
-    .btn-delete {
-      background-color: #f44336;
-      color: white;
-    }
-
-    .btn-back {
-      background-color: #666;
-      color: white;
-    }
-  </style>
 </head>
 
 <body>

@@ -4,46 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Novo Produto</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-
-    form {
-      width: 500px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 8px;
-      margin: 5px 0 15px 0;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .btn-back {
-      background-color: #666;
-    }
-
-    .btn-back:hover {
-      background-color: #555;
-    }
-  </style>
 </head>
 
 <body>

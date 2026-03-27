@@ -11,7 +11,7 @@ class Produto
 
   public function all()
   {
-    $query = "SELECT * FROM {$this->table} ORDER BY id DESC";
+    $query = "SELECT * FROM {$this->table}";
     $stmt = $this->conn->prepare($query);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -43,8 +43,10 @@ class Produto
   public function update($id, $dados)
   {
     $query = "UPDATE {$this->table} 
-                  SET nome = :nome, descricao = :descricao, 
-                      preco = :preco, quantidade = :quantidade 
+                  SET nome = :nome, 
+                      descricao = :descricao, 
+                      preco = :preco, 
+                      quantidade = :quantidade 
                   WHERE id = :id";
     $stmt = $this->conn->prepare($query);
 

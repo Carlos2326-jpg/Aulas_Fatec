@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../core/Database.php';
-require_once __DIR__ . '/../models/Produto.php';
+require_once __DIR__ . '/../Models/Produto.php';
+require_once __DIR__ . '/../../Core/Database.php';
 
 class ProdutoController
 {
@@ -9,19 +9,19 @@ class ProdutoController
   public function __construct()
   {
     $database = new Database();
-    $db = $database->connect();
+    $db = $database->connect(); 
     $this->produtoModel = new Produto($db);
   }
 
   public function index()
   {
     $produtos = $this->produtoModel->all();
-    require_once __DIR__ . '/../views/produtos/index.php';
+    require_once __DIR__ . '/../Views/Produto/index.php';
   }
 
-  public function create()
+  public function create()    
   {
-    require_once __DIR__ . '/../views/produtos/create.php';
+    require_once __DIR__ . '/../Views/Produto/create.php';
   }
 
   public function store()
@@ -47,8 +47,8 @@ class ProdutoController
     if (isset($_GET['id'])) {
       $id = $_GET['id'];
       $produto = $this->produtoModel->find($id);
-      require_once __DIR__ . '/../views/produtos/edit.php';
-    }
+      require_once __DIR__ . '/../Views/Produto/edit.php';
+    } 
   }
 
   public function update()
