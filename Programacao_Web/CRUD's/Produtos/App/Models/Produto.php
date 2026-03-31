@@ -2,11 +2,12 @@
 class Produto
 {
   private $conn;
-  private $table = 'produtos';
+  private $table;
 
   public function __construct($db)
   {
     $this->conn = $db;
+    $this->table = 'produtos';
   }
 
   public function all()

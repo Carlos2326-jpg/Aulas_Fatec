@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Mar-2026 às 14:42
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Tempo de geração: 31-Mar-2026 às 22:52
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,6 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `client`
+--
+
+CREATE TABLE `client` (
+  `id` int(11) NOT NULL,
+  `nomeCompleto` varchar(45) NOT NULL,
+  `cpf` varchar(11) NOT NULL,
+  `email` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `produtos`
 --
 
@@ -33,16 +46,16 @@ CREATE TABLE `produtos` (
   `descricao` text DEFAULT NULL,
   `preco` decimal(10,2) NOT NULL,
   `quantidade` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `produtos`
+-- Índices para tabela `client`
 --
-ALTER TABLE `produtos`
+ALTER TABLE `client`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -50,9 +63,9 @@ ALTER TABLE `produtos`
 --
 
 --
--- AUTO_INCREMENT de tabela `produtos`
+-- AUTO_INCREMENT de tabela `client`
 --
-ALTER TABLE `produtos`
+ALTER TABLE `client`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
