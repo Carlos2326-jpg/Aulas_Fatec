@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO - Class</title>
+</head>
+<body>
+    <script>
+        class Pessoa {
+            constructor(nome, sobreNome) {
+                this.nome = nome;
+                this.sobreNome = sobreNome;
+                this.nomeCompleto = `${this.nome} ${this.sobreNome}`;
+            }
+
+            Apresetar() {       
+                return `Meu nome é: ${this.nomeCompleto}`; 
+            }
+        }
+
+        class Aluno extends Pessoa {
+            constructor(nome, sobreNome, Curso) {
+                super(nome, sobreNome);
+                this.Curso = Curso;
+            }
+
+            Estudar() {
+                document.write(`<br>Estou estudando: ${this.Curso}`);
+            }
+        }
+
+        const pessoa1 = new Pessoa("João", "Carlos");
+
+        document.write(pessoa1.Apresetar());
+    </script>
+</body>
+</html>

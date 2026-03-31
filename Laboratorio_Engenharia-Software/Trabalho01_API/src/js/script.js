@@ -1,4 +1,3 @@
-// Função assíncrona para buscar dados do CEP
 async function buscarDadosCEP(cep) {
     try {
         // Remove caracteres não numéricos
