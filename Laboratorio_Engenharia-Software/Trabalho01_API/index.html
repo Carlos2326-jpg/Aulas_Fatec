@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <title>Consulta de CEP</title>
+  </head>
+  <body>
+    <h1>Consulta de Endereço por CEP</h1>
+
+    <label for="cep">Digite seu CEP:</label>
+    <input
+      type="text"
+      name="cep"
+      id="cep"
+      placeholder="Ex: 01001-000"
+      maxlength="9"
+    />
+
+    <div id="resultados">
+      <p id="localidade">Cidade: Aguardando CEP...</p>
+      <p id="bairro">Bairro: Aguardando CEP...</p>
+      <p id="logradouro">Rua/Avenida: Aguardando CEP...</p>
+    </div>
+
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
