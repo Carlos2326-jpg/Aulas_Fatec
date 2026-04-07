@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <title>Cadastrar Usuario</title>
+  </head>
+  <body>
+    <header class="top">
+      <h1 class="title">Formulario de Cadastro</h1>
+    </header>
+
+    <form action="" class="forms" method="POST">
+      <section class="section-grup">
+        <section class="section-input">
+          <label for="name" class="input-title">Nome:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="input-larg"
+            placeholder="Digitr seu nome completo"
+            onblur="validarCampoObrigatorio('nome')"
+            required
+          />
+          <span class="erro" id="erro-nome"></span>
+        </section>
+      </section>
+
+      <section class="section-grup">
+        <section class="section-input">
+          <label for="email" class="input-title">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="input-email"
+            placeholder="xxxxxx@gmail.com"
+            required
+          />
+        </section>
+
+        <section class="section-input">
+          <label for="dataNasc" class="input-title">Data Nascimento:</label>
+          <input
+            type="date"
+            name="dataNasc"
+            id="dataNasc"
+            class="input-data"
+            required
+          />
+        </section>
+      </section>
+
+      <section class="section-grup">
+        <section class="section-input">
+          <label for="foneFixo" class="input-title">Telefone Fixo:</label>
+          <input
+            type="tel"
+            name="foneFixo"
+            id="foneFixo"
+            class="input-smal"
+            placeholder="(99) 9999-9999"
+          />
+        </section>
+
+        <section class="section-input">
+          <label for="foneCel" class="input-title">Telefone Celular:</label>
+          <input
+            type="tel"
+            name="foneCel"
+            id="foneCel"
+            class="input-smal"
+            placeholder="(99) 99999-9999"
+            max="11"
+            required
+          />
+        </section>
+
+        <section class="radio-group">
+          <section class="input-radio">
+            <input
+              type="radio"
+              name="tipo"
+              id="professor"
+              value="professor"
+              required
+            />
+            <label for="professor" class="input-title">Professor</label>
+          </section>
+
+          <section class="input-radio">
+            <input type="radio" name="tipo" id="aluno" value="aluno" />
+            <label for="aluno" class="input-title">Aluno</label>
+          </section>
+        </section>
+      </section>
+
+      <section class="section-grup">
+        <section class="section-input" id="curso">
+          <label for="area" class="input-title">Área:</label>
+          <input
+            type="text"
+            name="area"
+            id="area"
+            class="input-midie"
+            placeholder="Digite sua área de atuação"
+            required
+          />
+        </section>
+
+        <section class="section-input">
+          <label for="matricula" class="input-title">Matricula:</label>
+          <input
+            type="text"
+            name="matricula"
+            id="matricula"
+            class="input-smal"
+            placeholder="Digite sua matricula"
+            required
+          />
+        </section>
+      </section>
+
+      <section class="section-grup" id="radioStatus"></section>
+
+      <section id="mensagem"></section>
+
+      <section class="section-button">
+        <input type="submit" value="Enviar" class="input-submit" />
+        <input type="reset" value="Redefinir" class="input-submit" />
+      </section>
+    </form>
+
+    <script type="module" src="src/js/utils.js"></script>
+    <script type="module" src="src/js/class/Pessoa.js"></script>
+    <script type="module" src="src/js/class/Aluno.js"></script>
+    <script type="module" src="src/js/class/Professor.js"></script>
+    <script type="module" src="src/js/script.js"></script>
+    <script type="module" src="src/js/ValidarClass.js"></script>
+  </body>
+</html>

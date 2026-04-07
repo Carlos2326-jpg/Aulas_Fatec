@@ -1,60 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funcionario - Herança</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        class Funcionario {
-            constructor (nome, sobreNome, matricula, dataAdmissao, salario){
-                this.nome = nome;
-                this.sobreNome = sobreNome;
-                this.nomeCompleto = `${this.nome} ${this.sobreNome}`;
-                this.matricula = matricula;               this.dataAdmissao = dataAdmissao;  
-                this.salario = salario;
-            }
-
-            Apresentacao() {
-                document.write(`==== Funcionario ===== <br>`);
-                document.write(`Nome: ${this.nomeCompleto} | Matricula: ${this.matricula} | Data de admissão: ${this.dataAdmissao} | Salario: ${this.salario}<br>`);
-            }
+      class Funcionario {
+        constructor(nome, sobreNome, matricula, dataAdmissao, salario) {
+          this.nome = nome;
+          this.sobreNome = sobreNome;
+          this.nomeCompleto = `${this.nome} ${this.sobreNome}`;
+          this.matricula = matricula;
+          this.dataAdmissao = dataAdmissao;
+          this.salario = salario;
         }
 
-        class Fiscal extends Funcionario {
-            constructor (nome, sobreNome, matricula, dataAdmissao, salario, nivelInstrucao) {
-                super(nome, sobreNome, matricula, dataAdmissao, salario);
-                this.nivelInstrucao = nivelInstrucao;
-            }
-            
-            Fiscalizar() {
-                document.write(`Fiscalizando com nível: ${this.nivelInstrucao}<br>`);
-            }
+        Apresentacao() {
+          document.write(`==== Funcionario ===== <br>`);
+          document.write(
+            `Nome: ${this.nomeCompleto} | Matricula: ${this.matricula} | Data de admissão: ${this.dataAdmissao} | Salario: ${this.salario}<br>`,
+          );
+        }
+      }
+
+      class Fiscal extends Funcionario {
+        constructor(
+          nome,
+          sobreNome,
+          matricula,
+          dataAdmissao,
+          salario,
+          nivelInstrucao,
+        ) {
+          super(nome, sobreNome, matricula, dataAdmissao, salario);
+          this.nivelInstrucao = nivelInstrucao;
         }
 
-        class Corretor extends Funcionario {
-            constructor (nome, sobreNome, matricula, dataAdmissao, salario, tempoServico, areaAtuacao) {
-                super(nome, sobreNome, matricula, dataAdmissao, salario);
-                this.tempoServico = tempoServico;
-                this.areaAtuacao = areaAtuacao;
-            }
+        Fiscalizar() {
+          document.write(`Fiscalizando com nível: ${this.nivelInstrucao}<br>`);
+        }
+      }
 
-            Corrigir() {
-                document.write(`Corrigindo na área: ${this.areaAtuacao}<br>`);
-            }
+      class Corretor extends Funcionario {
+        constructor(
+          nome,
+          sobreNome,
+          matricula,
+          dataAdmissao,
+          salario,
+          tempoServico,
+          areaAtuacao,
+        ) {
+          super(nome, sobreNome, matricula, dataAdmissao, salario);
+          this.tempoServico = tempoServico;
+          this.areaAtuacao = areaAtuacao;
         }
 
-        const funcionario1 = new Funcionario("João", "Carlos", "123", "30/09/2023", "1000");
-        
-        const fiscal1 = new Fiscal("Maria", "Silva", "456", "15/01/2024", "2500", "Superior");
-        const corretor1 = new Corretor("Pedro", "Santos", "789", "10/03/2024", "1800", "5 anos", "Direito Civil");
+        Corrigir() {
+          document.write(`Corrigindo na área: ${this.areaAtuacao}<br>`);
+        }
+      }
+      
+      const funcionario1 = new Funcionario(
+        "João",
+        "Carlos",
+        "123",
+        "30/09/2023",
+        "1000",
+      );
 
-        funcionario1.Apresentacao();
-        fiscal1.Apresentacao();
-        fiscal1.Fiscalizar();
-        corretor1.Apresentacao();
-        corretor1.Corrigir();
+      const fiscal1 = new Fiscal(
+        "Maria",
+        "Silva",
+        "456",
+        "15/01/2024",
+        "2500",
+        "Superior",
+      );
+      const corretor1 = new Corretor(
+        "Pedro",
+        "Santos",
+        "789",
+        "10/03/2024",
+        "1800",
+        "5 anos",
+        "Direito Civil",
+      );
+
+      funcionario1.Apresentacao();
+      fiscal1.Apresentacao();
+      fiscal1.Fiscalizar();
+      corretor1.Apresentacao();
+      corretor1.Corrigir();
     </script>
-</body>
+  </body>
 </html>
