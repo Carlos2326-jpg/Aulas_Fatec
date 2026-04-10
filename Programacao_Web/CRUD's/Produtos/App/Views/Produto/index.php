@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Produtos</title>
 </head>
 
@@ -19,7 +19,7 @@
     </div>
   <?php endif; ?>
 
-  <a href="?action=create" class="btn btn-add">Novo Produto</a>
+  <a href="?action=create">Novo Produto</a>
   <br><br>
 
   <table>
@@ -33,6 +33,7 @@
         <th>Ações</th>
       </tr>
     </thead>
+
     <tbody>
       <?php if (empty($produtos)): ?>
         <tr>
@@ -47,9 +48,8 @@
             <td>R$ <?= number_format($produto['preco'], 2, ',', '.') ?></td>
             <td><?= $produto['quantidade'] ?></td>
             <td>
-              <a href="?action=edit&id=<?= $produto['id'] ?>" class="btn btn-edit">Editar</a>
+              <a href="?action=edit&id=<?= $produto['id'] ?>">Editar</a>
               <a href="?action=delete&id=<?= $produto['id'] ?>"
-                class="btn btn-delete"
                 onclick="return confirm('Tem certeza que deseja excluir este produto?')">Excluir</a>
             </td>
           </tr>

@@ -30,7 +30,7 @@ class Produto
   public function create($dados)
   {
     $query = "INSERT INTO {$this->table} (nome, descricao, preco, quantidade) 
-                  VALUES (:nome, :descricao, :preco, :quantidade)";
+              VALUES (:nome, :descricao, :preco, :quantidade)";
     $stmt = $this->conn->prepare($query);
 
     $stmt->bindParam(':nome', $dados['nome']);
@@ -44,11 +44,11 @@ class Produto
   public function update($id, $dados)
   {
     $query = "UPDATE {$this->table} 
-                  SET nome = :nome, 
-                      descricao = :descricao, 
-                      preco = :preco, 
-                      quantidade = :quantidade 
-                  WHERE id = :id";
+              SET nome = :nome, 
+                  descricao = :descricao, 
+                  preco = :preco, 
+                  quantidade = :quantidade 
+              WHERE id = :id";
     $stmt = $this->conn->prepare($query);
 
     $stmt->bindParam(':id', $id);
@@ -65,6 +65,7 @@ class Produto
     $query = "DELETE FROM {$this->table} WHERE id = :id";
     $stmt = $this->conn->prepare($query);
     $stmt->bindParam(':id', $id);
+    
     return $stmt->execute();
   }
 }
