@@ -39,14 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Corrigido: == em vez de =
   </header>
 
   <section id="section-form">
-    <form action="" method="post" id="forms-post"> <!-- Corrigido: forms-post -->
-      <section class="section-ground"> <!-- Corrigido: section-ground -->
-        <input type="number" name="largura" class="input-number" step="0.01" required> <!-- Adicionado step e required -->
+    <form action="" method="post" id="forms-post"> 
+      <section class="section-ground"> 
+        <input type="number" name="largura" class="input-number" step="0.01" required> 
         <label for="largura">Largura</label>
       </section>
 
-      <section class="section-ground"> <!-- Corrigido: section-ground -->
-        <input type="number" name="altura" class="input-number" step="0.01" required> <!-- Adicionado step e required -->
+      <section class="section-ground"> 
+        <input type="number" name="altura" class="input-number" step="0.01" required> 
         <label for="altura">Altura</label>
       </section>
 
