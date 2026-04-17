@@ -15,7 +15,7 @@ class ClienteController
 
   public function index()
   {
-    $produtos = $this->clienteModel->all();
+    $clientes = $this->clienteModel->all();
     require_once __DIR__ . '/../Views/Clientes/index.php';
   }
 
@@ -34,18 +34,17 @@ class ClienteController
       ];
 
       if ($this->clienteModel->create($dados)) {
-        header('Location: index.php?action=index&success=1');
+        header('Location: index.php?controller=clientes&action=index&success=1');
       } else {
-        echo "Erro ao cadastrar produto.";
+        echo "Erro ao cadastrar cliente.";
       }
     }
   }
 
-  public function edit()
+  public function edit($id)
   {
-    if (isset($_GET['id'])) {
-      $id = $_GET['id'];
-      $produto = $this->clienteModel->find($id);
+    if ($id) {
+      $cliente = $this->clienteModel->find($id);
       require_once __DIR__ . '/../Views/Clientes/edit.php';
     }
   }
@@ -61,21 +60,20 @@ class ClienteController
       ];
 
       if ($this->clienteModel->update($id, $dados)) {
-        header('Location: index.php?action=index&success=2');
+        header('Location: index.php?controller=clientes&action=index&success=2');
       } else {
-        echo "Erro ao atualizar produto.";
+        echo "Erro ao atualizar cliente.";
       }
     }
   }
 
-  public function delete()
+  public function delete($id)
   {
-    if (isset($_GET['id'])) {
-      $id = $_GET['id'];
+    if ($id) {
       if ($this->clienteModel->delete($id)) {
-        header('Location: index.php?action=index&success=3');
+        header('Location: index.php?controller=clientes&action=index&success=3');
       } else {
-        echo "Erro ao excluir produto.";
+        echo "Erro ao excluir cliente.";
       }
     }
   }

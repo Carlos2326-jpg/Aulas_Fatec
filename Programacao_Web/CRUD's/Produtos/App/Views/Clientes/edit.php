@@ -8,8 +8,8 @@
 </head>
 
 <body>
-  <h1>Editar Produto</h1>
-  <form method="POST" action="?action=update">
+  <h1>Editar Cliente</h1>
+  <form method="POST" action="?controller=produtos&action=update">
     <input type="hidden" name="id" value="<?= $cliente['id'] ?>">
 
     <label>Nome Completo:</label>
@@ -19,7 +19,10 @@
     <input type="text" name="cpf" value="<?= htmlspecialchars($cliente['cpf']) ?>" required>
 
     <label>email:</label>
-    <input type="text" name="email" value="<?= htmlspecialchars($cliente['email']) ?>" required>
+    <input type="email" name="email" value="<?= htmlspecialchars($cliente['email']) ?>" required> 
+
+    <button type="submit">Atualizar</button> 
+    <a href="?controller=clientes&action=index" class="btn-back"><button type="button">Voltar</button></a>
   </form>
 </body>
 

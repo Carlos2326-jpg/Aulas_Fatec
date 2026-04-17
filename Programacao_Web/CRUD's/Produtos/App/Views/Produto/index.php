@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,8 @@
     </div>
   <?php endif; ?>
 
-  <a href="?action=create">Novo Produto</a>
+  <a href="?controller=home" class="btn-home">Voltar ao Início</a>
+  <a href="?controller=produtos&action=create">Novo Produto</a>
   <br><br>
 
   <table>
@@ -48,8 +50,8 @@
             <td>R$ <?= number_format($produto['preco'], 2, ',', '.') ?></td>
             <td><?= $produto['quantidade'] ?></td>
             <td>
-              <a href="?action=edit&id=<?= $produto['id'] ?>">Editar</a>
-              <a href="?action=delete&id=<?= $produto['id'] ?>"
+              <a href="?controller=produtos&action=edit&id=<?= $produto['id'] ?>">Editar</a>
+              <a href="?controller=produtos&action=delete&id=<?= $produto['id'] ?>"
                 onclick="return confirm('Tem certeza que deseja excluir este produto?')">Excluir</a>
             </td>
           </tr>

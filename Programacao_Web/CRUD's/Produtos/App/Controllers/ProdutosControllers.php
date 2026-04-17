@@ -35,7 +35,7 @@ class ProdutoController
       ];
 
       if ($this->produtoModel->create($dados)) {
-        header('Location: index.php?action=index&success=1');
+        header('Location: index.php?controller=produtos&action=index&success=1');
       } else {
         echo "Erro ao cadastrar produto.";
       }
@@ -63,7 +63,7 @@ class ProdutoController
       ];
 
       if ($this->produtoModel->update($id, $dados)) {
-        header('Location: index.php?action=index&success=2');
+        header('Location: index.php?controller=produtos&action=index&success=2');
       } else {
         echo "Erro ao atualizar produto.";
       }
@@ -75,7 +75,7 @@ class ProdutoController
     if (isset($_GET['id'])) {
       $id = $_GET['id'];
       if ($this->produtoModel->delete($id)) {
-        header('Location: index.php?action=index&success=3');
+        header('Location: index.php?controller=produtos&action=index&success=3');
       } else {
         echo "Erro ao excluir produto.";
       }

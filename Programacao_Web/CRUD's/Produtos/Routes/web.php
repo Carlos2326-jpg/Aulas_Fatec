@@ -1,31 +1,46 @@
 <?php
 require_once __DIR__ . '/../App/Controllers/ProdutosControllers.php';
 require_once __DIR__ . '/../App/Controllers/ClienteControllers.php';
+require_once __DIR__ . '/../App/Controllers/HomeController.php';
 
-$controllerProduto = new ProdutoController();
-
+// Pega os parâmetros da URL
+$controllerName = $_GET['controller'] ?? "home";
 $action = $_GET['action'] ?? 'index';
 
+// Instancia o controller correto baseado no parâmetro
+switch ($controllerName) {
+    case 'produtos':
+        $controller = new ProdutoController();
+        break;
+    case 'clientes':
+        $controller = new ClienteController();
+        break;
+    case  'home':
+        $controller = new HomeController();
+        break;
+}   
+
+// Executa a ação do controller
 switch ($action) {
     case 'index':
-        $controllerProduto->index();
+        $controller->index();
         break;
     case 'create':
-        $controllerProduto->create();
+        $controller->create();
         break;
     case 'store':
-        $controllerProduto->store();
+        $controller->store();
         break;
     case 'edit':
-        $controllerProduto->edit();
+        $controller->edit($_GET['id'] ?? null);
         break;
     case 'update':
-        $controllerProduto->update();
+        $controller->update();
         break;
     case 'delete':
-        $controllerProduto->delete();
+        $controller->delete($_GET['id'] ?? null);
         break;
     default:
-        echo "Rota não encontrada.";
+        echo "Ação não encontrada.";
         break;
 }

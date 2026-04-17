@@ -45,7 +45,7 @@ class Cliente
     $query = "UPDATE {$this->table} 
               SET nomeCompleto = :nomeCompleto, 
                   cpf = :cpf, 
-                  email = :email, 
+                  email = :email
               WHERE id = :id";
     $stmt = $this->conn->prepare($query);
 

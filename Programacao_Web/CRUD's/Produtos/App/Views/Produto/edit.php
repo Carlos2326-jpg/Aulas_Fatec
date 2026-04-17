@@ -9,7 +9,7 @@
 
 <body>
   <h1>Editar Produto</h1>
-  <form method="POST" action="?action=update">
+  <form method="POST" action="?controller=produtos&action=update">
     <input type="hidden" name="id" value="<?= $produto['id'] ?>">
 
     <label>Nome:</label>
@@ -25,7 +25,7 @@
     <input type="number" name="quantidade" value="<?= $produto['quantidade'] ?>" required min="0">
 
     <button type="submit">Atualizar</button>
-    <a href="index.php" class="btn-back"><button type="button">Voltar</button></a>
+    <a href="?controller=produtos&action=index" class="btn-back"><button type="button">Voltar</button></a>
   </form>
 </body>
 
