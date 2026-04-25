@@ -1,9 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DuplaController;
 
-Route::get('/inicio', [App/Https/Controller/Controller::class, 'index']);
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/dupla', [DuplaController::class, 'dupla'])->name('dupla');
