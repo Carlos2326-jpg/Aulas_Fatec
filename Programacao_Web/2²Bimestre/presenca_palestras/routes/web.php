@@ -1,5 +1,10 @@
 <?php
 
-use App\Http\Controllers\DuplaController;
+use App\Http\Controllers\PalestraController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/dupla', [DuplaController::class, 'dupla'])->name('dupla');
+Route::get('/', function () {
+    return redirect()->route('palestras.index');
+});
+
+Route::resource('palestras', PalestraController::class);

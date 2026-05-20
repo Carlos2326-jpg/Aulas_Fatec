@@ -1,0 +1,86 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Bloco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto {
+  width: 150px;
+  height: auto;
+}
+
+.title {
+  font-size: 20px;
+
+  margin: 15px auto 4px -10px;
+
+  text-align: center;
+}
+
+.Bloco-botao {
+  padding: 10px;
+}
+
+.Incrementar,
+.Decrementar {
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Incrementar {
+  padding: 12px 15px;
+  margin: 5px;
+
+  border: 1px solid rgb(0, 128, 0);
+
+  background-color: rgb(10, 231, 10);
+}
+
+.Incrementar:hover {
+  background-color: rgb(9, 176, 9);
+}
+
+.Decrementar {
+  padding: 10px 15px;
+  margin: 5px;
+
+  border: 1px solid rgb(160, 0, 0);
+
+  background-color: rgb(225, 2, 2);
+}
+
+.Decrementar:hover {
+  background-color: rgb(187, 0, 0);
+}
+
+.contador-individual,
+.ContradorTotal {
+  font-weight: bold;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  text-align: center;
+  padding: 10px;
+}
+
+.contador-individual {
+  width: 100px;
+}
+
+.ContradorTotal {
+  width: 150px;
+
+  margin-bottom: 30px;
+}
